@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Marcando Minhas Horas</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="container">
+        <header class="header">
+          <h1 class="title">Marcando Minhas Horas</h1>
+          <div class="controls">
+            <div class="control-group">
+              <label for="month-select">Mês:</label>
+              <select id="month-select" class="select">
+                <option value="0">Janeiro</option>
+                <option value="1">Fevereiro</option>
+                <option value="2">Março</option>
+                <option value="3">Abril</option>
+                <option value="4">Maio</option>
+                <option value="5">Junho</option>
+                <option value="6">Julho</option>
+                <option value="7">Agosto</option>
+                <option value="8">Setembro</option>
+                <option value="9">Outubro</option>
+                <option value="10">Novembro</option>
+                <option value="11">Dezembro</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label for="year-select">Ano:</label>
+              <select id="year-select" class="select">
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+              </select>
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <div class="table-wrapper">
+            <table class="hours-table">
+              <thead>
+                <tr>
+                  <th>Dia</th>
+                  <th>Hora Inicial</th>
+                  <th>Hora Final</th>
+                  <th>Total Horas</th>
+                </tr>
+              </thead>
+
+              <tbody id="table-body">
+                <!-- Linhas da tabela serão geradas por JavaScript -->
+              </tbody>
+
+              <tfoot>
+                <tr class="total-row">
+                  <td colspan="3" class="total-label">Total do Mês:</td>
+                  <td id="total-hours" class="total-value">0h</td>
+                </tr>
+              </tfoot>
+
+            </table>
+          </div>
+        </main>
+
+        <footer class="footer">
+          <p>&copy; 2025 Marcando Minhas Horas - Rastreamento de Horas de Trabalho</p>
+        </footer>
+        
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+
+</html>

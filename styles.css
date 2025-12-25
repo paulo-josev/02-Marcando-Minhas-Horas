@@ -1,0 +1,315 @@
+/* Reset e Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-group label {
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+}
+
+.select {
+  padding: 10px 15px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.select:hover {
+  border-color: #764ba2;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.select:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Main Content */
+.main {
+  margin-bottom: 30px;
+}
+
+.table-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
+}
+
+/* Tabela */
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.hours-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.hours-table th {
+  padding: 18px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.hours-table tbody tr {
+  border-bottom: 1px solid white;
+  transition: background-color 0.3s ease;
+}
+
+.hours-table tbody tr:hover {
+  background-color: #f8f9ff;
+}
+
+.hours-table tbody tr:nth-child(even) {
+  background-color: #f5f7ff;
+}
+
+.hours-table td {
+  padding: 16px 18px;
+  font-size: 3rem;
+  color: rgb(93, 69, 197);
+}
+
+.hours-table input[type="time"] {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 150px;
+}
+
+.hours-table input[type="time"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.hours-table input[type="time"]:hover {
+  border-color: #667eea;
+}
+
+.day-cell {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 50px;
+}
+
+.total-cell {
+  font-weight: 600;
+  color: #764ba2;
+  background-color: #f0f4ff;
+}
+
+/* Footer da Tabela */
+.hours-table tfoot {
+  background: linear-gradient(135deg, #764ba2 0%, white 100%);
+}
+
+.total-row {
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.total-row td {
+  padding: 20px 18px;
+}
+
+.total-label {
+  text-align: right;
+}
+
+.total-value {
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .control-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .select {
+    min-width: 100%;
+  }
+
+  .hours-table th,
+  .hours-table td {
+    padding: 12px 10px;
+    font-size: 0.85rem;
+  }
+
+  .hours-table input[type="time"] {
+    max-width: 120px;
+    padding: 6px 8px;
+  }
+
+  .total-row td {
+    padding: 15px 10px;
+  }
+
+  .total-value {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .header {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .hours-table th,
+  .hours-table td {
+    padding: 10px 8px;
+    font-size: 0.75rem;
+  }
+
+  .hours-table input[type="time"] {
+    max-width: 100px;
+    font-size: 0.8rem;
+  }
+
+  .control-group label {
+    font-size: 0.9rem;
+  }
+
+  .select {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hours-table tbody tr {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Scrollbar Customizado */
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
